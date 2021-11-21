@@ -1,0 +1,765 @@
+//1.1  DOT NOTATION
+
+
+// let symbol_vert_n = ("\n   |   |   ");
+// let symbol_vert = ("   |   |   \n");
+
+// let symbol_hor = ("\n-----------");
+
+// let pattern = (symbol_vert_n.repeat(3)) + (symbol_hor)
+
+// console.log(pattern.repeat(2));
+// console.log(symbol_vert.repeat(3));
+
+
+// FIRST ATTEMPT:
+// let symbol_vert = ("   |   |   ");
+
+// let symbol_hor = ("-----------");
+
+// console.log(symbol_vert);
+// console.log(symbol_vert);
+// console.log(symbol_vert);
+// console.log(symbol_hor);
+// console.log(symbol_vert);
+// console.log(symbol_vert);
+// console.log(symbol_vert);
+// console.log(symbol_hor);
+// console.log(symbol_vert);
+// console.log(symbol_vert);
+// console.log(symbol_vert);
+
+
+
+// CHALLENGE :
+
+// (new line in string)
+// console.log(`My name is Donna
+// I am 28 years old
+// My star sign is cancer in sun`);
+
+// using \n
+// console.log("My name is Donna\nI am 28 years old\nMy star sign is cancer in sun");
+
+
+
+// challenge 4; show another string method and number method (useful for example when showing only parts of someones email address and keeping other information hidden)
+
+// let turtlename = 'donnatello'
+
+// // Displays 'd'
+// console.log(turtlename.substring(0, 1))
+// console.log(turtlename.substring(1, 0))
+
+// // Displays 'donn'
+// console.log(turtlename.substring(0, 4))
+
+// // Displays everything after donn, so "atello"
+// console.log(turtlename.substring(4))
+
+// // Displays everything between 4th and 7th character: d(0) o(1) n(2) n(3) a(4) t(5) e(6) l(7)  so : ate
+// console.log(turtlename.substring(4, 7))
+// console.log(turtlename.substring(7, 4))
+
+
+
+// console.log("________________________________________________________________")
+
+
+// toFixed()   returns a string, with the number written with a specified number of decimals:
+// Warning: Floating point numbers cannot represent all decimals precisely in binary. This can lead to unexpected results, such as 0.1 + 0.2 === 0.3 returning false .
+
+// function financial(x) {
+//     return Number.parseFloat(x).toFixed(3);
+//   }
+
+  // create total of 4 decimals, change number to 4 and it adds 0 after 6
+//   console.log(financial(123.456));
+
+  // e+5 adds 5 decimals
+//   console.log(financial(123.456e+5));
+
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+
+//1.2  VARIABLES
+
+
+
+// Activity 1
+// let someonesName = "Ash"
+// let someonesAge = 54
+// let favouriteColor = "Real gold"
+
+// console.log(`Hey my name is ${someonesName} and have been ${someonesAge} years on this planet as far as I'm aware.
+// And my favourite colour? ${favouriteColor}.. I'd say`)
+
+// someonesName = "Yasmin"
+// someonesAge = 10
+// favouriteColor = "orange"
+
+// console.log(`And that little girl over there is called ${someonesName}.. She must be around ${someonesAge} years old now.. 
+// What's your favourite color ${someonesName}? She replies: "${favouriteColor}" sir!`)
+
+
+// Activity 2
+
+// let breakfast = "toast with butter and pate"
+// let lunch = "cucumber soup"
+// let dinner = "I haven't decided yet"
+
+
+// console.log(`I get confused when people say dinner for lunch and lunch for dinner. So you guess which one is which. 
+// For breakfast I had ${breakfast}.
+// For lunch I'm planning to make ${lunch} and for dinner ${dinner}.`)
+
+
+// breakfast = "the same as yesterday"
+// lunch = "leftover cucumber soup"
+// dinner = "no clue yet"
+
+// console.log(`Then tomorrow for breakfast I'll likely have ${breakfast}.. 
+// For lunch probably some ${lunch}. And dinner? I got ${dinner}.`)
+
+
+
+
+// ACTIVITY 3 
+
+// // To set two dates to two variables. We have to use the Date Object.
+// const birthDay = new Date("2000,12,03")
+// const todaysDate = new Date("2021, 11, 22");
+// // This calculates the difference but IN milliseconds.
+// let diffInTime = todaysDate.getTime() - birthDay.getTime ()
+
+
+// // To convert that to days we use this calculation.
+// let diffInDays = diffInTime / (1000 * 3600 * 24);
+// let years = diffInDays /365
+// console.log(Math.floor(years))
+// // // Finally, it is console logged out here using string template literals. 
+// console.log(`The difference between ${todaysDate} and ${birthDay} is ${diffInDays} days.`);
+
+
+
+
+
+// ACTIVITY 3
+
+// day of month e.g. 22nd = 22), month (july = 07)
+// let birthdayDate = [16,07]; 
+// let today = new Date();
+// let b_day = new Date(today.getFullYear(),birthdayDate[1]-1,birthdayDate[0]);
+// if( today.getTime() > b_day.getTime()) {
+//     b_day.setFullYear(b_day.getFullYear()+1);
+// }
+// diff = b_day.getTime()-today.getTime();
+// days = Math.floor(diff/(1000*60*60*24));
+// console.log(days+" days until your next birthday!");
+
+
+
+
+// ACTIVITY 4
+
+// let space1= " x"
+// let space2= " o"
+// let space3= "  "
+// let space4= " x"
+// let space5= " x"
+// let space6= "  "
+// let space7= " o"
+// let space8= "  "
+// let space9= "  "
+
+
+
+
+// console.log(`${space3}     | ${space3}  | ${space3}   
+// ${space1}     | ${space2}  | ${space3}   
+// ${space3}     | ${space3}  | ${space3}   
+//  - - - - - - - - - - 
+// ${space3}     | ${space3}  | ${space3}   
+// ${space4}     | ${space5}  | ${space6}   
+// ${space3}     | ${space3}  | ${space3}   
+//  - - - - - - - - - - 
+// ${space3}     | ${space3}  | ${space3}   
+// ${space7}     | ${space8}  | ${space9}   
+// ${space3}     | ${space3}  | ${space3}   
+// `)
+
+
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+
+//1.3 IF ELSE SWITCH
+
+//ACTIVITY 1
+
+// let age = 9
+
+// if(age < 17){
+//      console.log("I can't serve you, you aren't old enough") 
+// }       
+// else {
+//     console.log("I can serve you")
+// }
+
+
+// let age = 1000
+
+// if(age >= 17){
+//      console.log("I can serve you") 
+// }       
+// else {
+//     console.log("I can't serve you")
+// }
+
+// STRETCH:
+
+
+// let age = 16
+// let country = "madagascar"
+
+// if(age >= 17 && country == "UK"){
+//      console.log("I can serve you") 
+// }       
+// else if(age< 17 && country =="UK"){
+//     console.log("Sorry, I can't serve you alcohol")
+// }
+// else if(age<17 && country !="UK"){
+//     console.log("Sorry, I can't serve you alcohol")
+
+// }
+// else {
+//     console.log("What do you want to drink")
+// }
+
+
+// //ACTIVITY 2
+// switch(expression){
+//     case x:
+//         //code here
+//         break; 
+//     case y:
+//         // code here
+//         break;
+//     default:
+//         // code here
+// }
+
+// let fav_pizzaTopping ="ham";
+
+// switch(fav_pizzaTopping){
+//     case "salami" :
+//         console.log("These are important ingredients for my pizza")
+//         break;
+//     case "cheese":
+//         console.log(` ${pizzaTopping} should not be on my pizza`)
+//         break;
+//     default:
+//         console.log(`I don't mind having ${fav_pizzaTopping} on my pizza`)
+
+// }
+
+
+// ACTIVITY 3
+
+// let password = "ddddddddd"
+
+// if (password.length < 8) {
+//     console.log("Password too short")
+// }
+
+// else {
+//     console.log(`Password is correct: ${password}`)
+// }
+
+// STRETCH
+// let num= "10"
+
+// if (num % 3 === 0 && num % 5 === 0 )  {
+//     console.log("This number is divisible by 3 and 5")
+// }
+// else if (num % 5 === 0 ) {
+//     console.log("This number is divisible by 5")
+// }
+// else if (num % 3 === 0 ) {
+//     console.log("This number is divisible by 3")
+// }
+// else {
+//     console.log("This number is not divisble by 3 or 5")
+
+// }
+
+// // ACTIVITY 4
+// let num = 15
+
+// if (num % 3 === 0 && num % 5 == 0) {
+//     console.log("fizz buzz")
+// }
+// else if (num % 3 === 0) {
+//     console.log("fizz")
+// }
+// else if (num % 5 === 0) {
+//     console.log("buzz")
+// }
+// else {
+//     console.log("num")
+// }
+
+// make sure you did fizzbuzz first
+
+
+// ACTIVITY 5
+
+// let num = 123321;
+// let num2String = num.toString();
+// let reverseNum2String = num2String.split(' ').reverse().join(''); // .split('') lets you split letters individually , .join('') does the opposite
+
+// console.log(reverseNum2String);
+
+// if (num == reverseNum2String) {
+//     console.log(`${num} is a palindrome`)
+// }
+// else {
+//     console.log(`${num} is not a palindrome`)
+// }
+
+
+// ACTIVITY 6 
+// Create a variable called time, a variable called placeOfWork
+// and a variable called townOfHome. Create an if statement that
+// logs to the console where someone is at times of the day. E.g. if
+// the time is 7 I’m at home, at 8 I’m commuting, at 9 I’m at work.
+
+//// time is a 24 hour number, so aprox 1 minute to 6pm would be written as 17.99 (math comparison aren't true)
+// let time = 6
+// let name_person = "hassan"
+
+// if (time >= 9 && time <= 17){
+//     console.log("You're at work");
+// }
+// else if (time <= 7.99 && time >= 8.99){
+//     console.log(`${name_person} is commuting `);
+// }
+// else if (time >= 17 && time <=17.99 ){
+//     console.log(`${name_person} is commuting `);
+// }
+// else {
+//     console.log(`${name_person} should be at home`);
+// }
+
+// ACTIVITY 7
+
+// MY ANSWER:
+
+// let string = 'jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi';
+// //  function declaration
+// function lastVowel(x){
+//     const match = x.match(/[a,e,i,o,u](?!.*[a,e,i,o,u])/i);
+//     return match ? match[0] : 'No vowels found';
+//  }
+ 
+// // (`The last vowel of the string is: '${lastVowel(string)}`);
+// // Find the last vowel of the string:
+// console.log(lastVowel(string));
+
+// // Find the index of the last vowel of string
+// console.log(string.lastIndexOf(lastVowel(string)));
+
+
+
+
+
+// // Activity 7
+
+
+// let string = 'jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi';
+// let vowel_array = ['a', 'e', 'i', 'o', 'u'];
+// let highestIndex =0;
+// // counter go through whole array using length as limiter
+// for (let i = 0; i < vowel_array.length; i++){
+// //  console.log(string.lastIndexOf(vowelArr[i]));
+// // gets index of vowel in current iteration
+//     index = string.lastIndexOf(vowel_array[i]);
+// // compares current index to find highest index
+// if (index >= highestIndex ){
+// // so new highestindex becomes index
+//     highestIndex = index;
+// // won't reach last two nums in vowelarray
+//     lastVowel = vowel_array[i];
+// }
+// }
+
+// // This like logs the last Vowel to the console. 
+// console.log(lastVowel); 
+// // This line logs the index number of the last vowel. 
+// console.log(highestIndex)
+
+
+
+ 
+// ACTIVITY 8
+
+// word = "dheck word";
+// //charAt(0) to find first character in string  and last character in string:
+// // "n-1" as the output and we found the "e" character as the last character of the String.
+ 
+// if ( word.charAt(0) == word.charAt(word.length-1)) {
+//     console.log("true")
+// } else { 
+//     console.log("false")
+// }
+
+
+
+// ACTIVITY 9
+
+// let num1 = 9
+// let num2 = 2
+// let answerDivided = num1*num2
+
+// if(num1 % 2 == 0 && num2 %2 == 0) {
+//     console.log(`${num1} & ${num2} `)
+// }
+// else if(num1 % 2 == 0 && num2 !== 0) {
+//         console.log(num1);
+//     }
+// else if (num2 % 2 == 0 && num1 !== 0) {
+//             console.log(num2);
+//         }
+// else {
+//             console.log(answerDivided);
+//         }
+
+
+
+
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+
+//1.4 ARRAY & LOOPS
+
+
+// ACTIVITY 1:
+// let fav_films = ["Mad Max",
+//                  "Tampopo",
+//                  "Under The Skin"
+
+// ];
+
+
+// fav_films.push ("Lost in Translation")
+// fav_films.push ("The Tale of Princess Kaguya")
+// fav_films.pop();
+// console.log(fav_films);
+
+// for (let i = 0; i < fav_films.length; i++){
+//     console.log(fav_films[i]);
+// }
+
+// ACTIVIY 2
+
+// let randomNumber =[]
+
+// for(let i = 0; i < 6; i++){
+//     let randomNumber =(Math.floor(Math.random() * 51))
+//     randomNumber.push
+//     console.log(randomNumber);
+// }
+
+
+
+// felice valentine explanation
+// let numarr = []
+// let arr  = [1,2,3,4,5]
+// console.log(arr.length)
+// console.log( 5 == arr.length)
+// for(let i =3; i <arr.length; i++){
+
+
+// let randomNumber =(Math.floor(Math.random() * 51))
+// numarr.push(randomNumber)
+
+
+//       }
+//     console.log(numarr)
+
+
+
+// let numRound=[]
+// for( let rounds = 0; rounds <= 3 ; rounds++){
+// numRound.push("round nr" + rounds)
+// console.log(rounds)
+// console.log(numRound)
+// }
+
+// let numarr = []
+
+// for(let i =0; i<6; i++){
+
+
+//     let randomNumber =(Math.floor(Math.random() * 51))
+// numarr.push(randomNumber)
+// console.log(numarr)
+
+//       }
+
+// ACTIVITY 3
+
+// let randomNumber =[]
+
+// for(let i = 0; i < 6; i++){
+//     let randomNumber =(Math.floor(Math.random() * 51))
+//     randomNumber.push
+//     console.log(randomNumber);
+// }
+
+
+// let countdown = []
+
+// for(let i = 9 ; i > -1; i--){
+
+//     countdown.push
+//     console.log(i)
+// }
+
+
+// for(let i = 9 ; i > -1; i--){
+    
+//     countdown.push
+//     console.log(i)
+// }
+
+// for(let i = 0; i < 10; i++){
+    
+//     countdown.push
+//     console.log(i)
+
+// }
+
+
+
+
+
+// for(let i = 9; i > -1; i--){
+    
+//     countdown.push
+//     console.log(i)
+// }
+
+
+// // ACTIVITY 4
+// let storedFilms = [ "Jurassic Park",
+//                     "Lord of the Rings",
+//                     "Ghostbusters",
+//                     "ET"
+                    
+// ];
+
+
+// for(let i = 0; i < storedFilms.length; i++) {
+//     console.log(storedFilms[i]); }
+  
+// if (storedFilms[2] == "Ghostbusters"){
+//         console.log("Yay it's Ghostbusters!")
+
+//     }
+//     else {console.log("Boo! We want Ghostbusters!")}
+
+
+
+// ACTIVITY 5
+
+// let random_number = []
+
+// for (let i = 0; i<6 ; i++){
+//     let random_number =(Math.floor(Math.random() * 31))
+//     // random_number.push
+//     console.log(random_number);
+
+// }
+
+
+
+// ACTIVITY 6 ;; MATCHING NESTED LOOP; loop running inside another loop
+
+// let Bobfollowers = [ "David", 
+//                     "Jane", 
+//                     "Abdul", 
+//                     "Nikky"
+
+// ];
+
+// let Hannahfollowers = [ "Mohammed",
+//                         "Nikky",
+//                         "Abdul", 
+//                         "Bilal"
+
+// ];
+// // mutualFollowers = [];
+
+// for (let i = 0; i < Bobfollowers.length; i++) {
+//     for (let j = 0; j <Hannahfollowers.length; j++) {
+//         if(Bobfollowers[i] === Hannahfollowers[j]) {
+//             console.log(`Both people have the friend: ${Hannahfollowers[j]} in common `)
+//         }
+//     }
+// };
+
+
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+
+//1.5 FUNCTIONS
+
+//ACTIVITY 1
+//Take this code and turn it into arrow function syntax:
+
+// function factorial(n) {
+//     if ((n === 0) || (n === 1)) {
+//         return 1;
+//     } else {
+//         return (n * factorial(n-1));
+//     }
+// }
+
+// console.log(factorial(33));
+
+// // Arrow Function:
+ 
+// const factorial = (n) => {
+//     if ((n === 0) || (n === 1)) {
+//         return 1;
+//     } else {
+//         return (n * factorial(n-1));
+//     }
+
+// }
+
+// console.log(factorial(33));
+
+// ACTIVITY 2
+
+// let orderCount = 0
+// let updated_orderCount = orderCount +1    though this isnt needed as its alrdy in the function below , see: ordercount ++
+
+// const takeOrder = (topping1, topping2) => {
+//     console.log(`Pizza with ${topping1}, ${topping2}`);
+//     orderCount++;
+//     console.log(`Order number: ${orderCount++}`);
+    
+// }
+
+
+// takeOrder("pineapple", "ham");
+
+
+
+
+
+// ACTIVITY 3
+
+// let pin_number = 0072;
+// let account_balance = 1000;
+// let amount = 700;
+// let new_balance = (account_balance - amount);
+
+// const cash_machine = (pin, amount) => {
+//     if (account_balance >= amount && pin === pin_number){
+//     console.log(`Here is your money. Your new balance is:  £${new_balance}`);
+// }
+// else if (pin != pin_number){
+//         console.log ("Your pin is incorrect. Please try again.");
+//     } 
+// else if (account_balance < amount && pin === pin_number){
+//     console.log("You've got insufficient balance. Please try again")
+// } }
+
+
+// cash_machine(0072, 7000);
+
+
+
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________________
+
+//1.6 OBJECTS
+
+
+// ACTIVITY 1
+// function within an object
+
+// const person = {
+//     name: "mica",
+//     favVenueCapacity: 300,
+//     venueIsOfficial: true,
+//     line_up: ["curl", "support act 1", "support act 2"],
+//     sayHi:()=> 
+//     {console.log(`hi my name is ${person.name}`)}
+// }
+// person.sayHi()
+
+
+// //ACTIVITY 2
+
+// const pet = {
+//     name: "Tamagotchi",
+//     typeOfPet: "Cat",
+//     Age: 1,
+//     Colour: "Pink",
+  
+// eat:() =>{
+//     console.log(`${pet.name} is eating`);
+// },
+// drink:() =>{
+//     console.log(`${pet.name} is drinking`)
+// }
+
+// };
+// // when making a function you don't have to console log agin as that's already in the function. 
+// pet.eat()
+// pet.drink()
+
+
+// // ACTIVITY 3
+
+// const coffeeShop = {
+//     branch: "LilTreeBar4evahhh<3",
+//     drinks: ["House red", "House White", "Herbal Tea" ],
+//     drinkPrices: [4.50, 4.50, 2.00],
+//     food: ["Tortilla", "Paëlla", "Carrot Cake"],
+//     foodPrices: [9.00, 12.50, 3.50],
+
+// drinksOrdered(){
+//     return (`Your drinks order is ${coffeeShop.drinks[0]} x8, ${coffeeShop.drinks[1]} x1, ${coffeeShop.drinks[2]} x2. Drinks total is £${((coffeeShop.drinkPrices[0]*8)+coffeeShop.drinkPrices[1]+coffeeShop.drinkPrices[2]*2)}`);
+// },
+// foodOrdered(){
+//     return `Your food order is ${coffeeShop.food[0]} x9, ${coffeeShop.food[1]}. Food total is £${(coffeeShop.foodPrices[0]*9)+coffeeShop.foodPrices[1]}`;
+// },
+// }
+
+// let totalPrice = coffeeShop.foodPrices[0]*9+coffeeShop.foodPrices[1]+(coffeeShop.drinkPrices[0]*8)+coffeeShop.drinkPrices[1]+coffeeShop.drinkPrices[2]*2;
+
+// console.log(coffeeShop.drinksOrdered());
+// console.log(coffeeShop.foodOrdered());
+
+// console.log(`Total bill: £${totalPrice}`);
+// console.log(`Thank for visiting ${coffeeShop.branch}`);
+
